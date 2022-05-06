@@ -7,10 +7,10 @@ class PokeClient:
         self._userID = userID
         self._oauthtoken = oauthtoken
 
-    def _get_info_pokename(self, pokename):
-        """This method takes pokemon name then performs a get request to return a json file of poke info."""
+    def _get_info_evolution(self, testability):
+        """This method takes pokemon ability name then performs a get request to return a json file of poke info on it."""
         response = requests.get(
-            url = f"https://pokeapi.co/api/v2/pokemon/{pokename}/",
+            url = f"https://pokeapi.co/api/v2/ability/{testability}/",
             headers = {
                 "Content-Type": "application/json"
             }
